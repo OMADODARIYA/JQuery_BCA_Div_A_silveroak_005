@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <style>
+  #draggable { width: 150px; height: 150px; padding: 0.5em; background-color: rgb(233, 116, 116); }
+  #draggable1 { width: 150px; height: 150px; padding: 0.5em; background-color: rgb(96, 181, 187); }
+  #draggable2 { width: 150px; height: 150px; padding: 0.5em; background-color:darkgrey; }
+  
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <script>
+  $( document).ready(function(){
+    $( "#draggable" ).draggable();
+
+    $( "#draggable1" ).draggable({ axis: "y" });
+
+    $( "#draggable2" ).draggable({ axis: "x" });
+
+    $("#div2 span").draggable (  
+            { distance: 50 }  
+         ); 
+});
+
+
+  </script>
+</head>
+<body>
+ 
+<div id="draggable" class="ui-widget-content">
+  <p>MOVE ANYWHERE</p>
+</div><hr>
+
+<div id="div2" style="background-color: bisque;">  
+    <span>  
+     MOVE TEXT ANYWHERE  
+    </span>  
+</div>    <hr>
+
+
+<div id="draggable1" class="draggable ui-widget-content">
+    <p>MOVE TO UP AND DOWN</p>
+  </div><hr>
+
+  <div id="draggable2" class="draggable ui-widget-content">
+    <p>MOVE TO LEFT AND RIGHT</p>
+    </div><hr>
+
+    
+ 
+</body>
+</html>
